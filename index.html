@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Task</title>
+        <meta name="description" content="Personal Website of Ali Cigari, jack of all trades...">
+        <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0">
+        <link rel="stylesheet" href="countdowncube.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
+        <style class="inlinestyle">
+            #counter {
+                margin: 10 auto;
+                text-align: center;
+            }
+            span {
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size: 20px;
+            }
+            em {
+                font-size: 15px;
+            }
+            b {
+                font-family: 'Lemonada', cursive;
+            }
+            .card-panel {
+              position: relative;
+              padding: 1em 1.5em;
+              margin: 2em auto;
+            }
+            .card-panel:before {
+                content: "";
+                position: absolute;
+                top: 0%;
+                right: 0%;
+                width: 0px;
+                height: 0px;
+                border-bottom: 23px solid #eee;
+                border-right: 23px solid transparent;
+                -webkit-box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
+                -moz-box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
+                box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
+            }
+            .card-panel:after {
+                content: "";
+                position: absolute;
+                top: 0%;
+                right: 0%;
+                width: 0px;
+                height: 0px;
+                border-top: 22px solid #81d4fa; 
+                border-left: 22px solid transparent;
+            }            
+        </style>
+    </head>
+    <body class="light-blue lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div class="card-panel blue-grey lighten-5">
+                        <span>
+                            <b>3</b> <em>People around</em>,<br> Want to have tea/coffee?
+                        </span>
+                        <div id='counter' style="float: right;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m8 offset-m2">
+                    <div class="card-panel blue-grey lighten-5">
+                        <span>
+                            <b>2</b> <em>People around</em>,<br> Want to play basketball?
+                        </span>
+                        <div id='counter2' style="float: right;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m8 offset-m2">
+                    <div class="card-panel blue-grey lighten-5">
+                        <span>
+                            <b>5</b> <em>People around</em>,<br> Want to discuss travel?
+                        </span>
+                        <div id='counter3' style="float: right;"></div>
+                    </div>
+                </div>
+                <div class="col s12 m8 offset-m2">
+                    <div class="card-panel blue-grey lighten-5">
+                        <span>
+                            <b>3</b> <em>People around</em>,<br> Want to watch ZNMD?
+                        </span>
+                        <div id='counter4' style="float: right;"></div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="countdowncube.js"></script>
+        <script>
+            $('#counter').countdownCube({target: new Date( 'January 3, 2017 00:30:00' ), cubeSize: 25 } );
+            $('#counter2').countdownCube({target: new Date( 'January 3, 2017 11:00:00' ), cubeSize: 25 } );
+            $('#counter3').countdownCube({target: new Date( 'January 3, 2017 16:04:00' ), cubeSize: 25 } );
+            $('#counter4').countdownCube({target: new Date( 'January 3, 2017 00:10:00' ), cubeSize: 25 } );
+        </script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(".card-panel").hover(
+                function () {
+                    $(this).addClass('z-depth-5');
+                }, 
+                function () {
+                    $(this).removeClass('z-depth-5');
+                }
+            );
+        </script>
+    </body>
+</html>
+
